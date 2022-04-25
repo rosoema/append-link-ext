@@ -1,15 +1,32 @@
 export default function addData() {
-    let inputTitle = document.querySelector(".input-title").value;
-    let inputBase = document.querySelector(".input-base-link").value;
-    let obj = {
-        title: inputTitle,
-        base: inputBase
-    };
+    let title = localStorage.getItem("title");
+    let base = localStorage.getItem("base");
+    let stored = JSON.parse(localStorage.getItem("items"));
 
-    if(obj.title === null || obj.base === null || obj.title === undefined || obj.base === undefined){
-        alert("Both Title and Base link must be provided.");
+    if(title && base){
+        let arr = [];
+
+        if(stored && stored !== []){
+            arr.push(
+                ...stored, 
+                {
+                title: title,
+                base: base
+            });
+        } else {
+            arr.push(
+                {
+                title: title,
+                base: base
+            });
+        }   
+
+        localStorage.setItem("items", JSON.stringify(arr));
+        localStorage.removeItem("title");
+        localStorage.removeItem("base");
     } else {
-        chrome.storage.local.set({obj});
-        
+        alert("Both fields need to be filled out.");
+        localStorage.removeItem("title");
+        localStorage.removeItem("base");
     }
 }
