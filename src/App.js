@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
+import "./media/icon.svg";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NewBaseButton from './components/NewBaseButton';
+import AddNewBase from './components/AddNewBase';
+import { Fragment } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      <div className="wrap">
+        <Router>
+          <Routes>
+            {  }
+            <Route path="/" element={<NewBaseButton/>} />
+            <Route path="/new-base-link" element={<AddNewBase/>}></Route>
+          </Routes>
+        </Router>
+      </div>
+    </Fragment>
   );
 }
 
