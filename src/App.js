@@ -1,5 +1,4 @@
 import Header from "./components/Header";
-import "./media/icon.svg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NewBaseButton from './components/NewBaseButton';
 import AddNewBase from './components/AddNewBase';

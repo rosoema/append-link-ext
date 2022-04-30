@@ -9,7 +9,7 @@ body, html {
   box-sizing: border-box;
   font-family: "Montserrat";
   color: #FFF;
-  box-shadow: inset 0 0 5px #32E0C4;
+  box-shadow: inset 0 -5px 10px #32E0C440;
   border-radius: 2px;
   scroll-behavior: smooth;
 }
@@ -24,7 +24,7 @@ body, html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #32E0C4; 
+  background: #32E0C490; 
   border-radius: 10px;
 }
 
