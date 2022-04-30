@@ -9,18 +9,23 @@ body, html {
   box-sizing: border-box;
   font-family: "Montserrat";
   color: #FFF;
-}
-
-::-webkit-scrollbar {
-  background-color: #32E0C4;
-  border-radius: 20px;
-  width: 8px;
-  box-shadow: 0 0 5px #32E0C4;
+  box-shadow: inset 0 0 5px #32E0C4;
+  border-radius: 2px;
+  scroll-behavior: smooth;
 }
 
 .wrap {
   width: 80%;
   margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #32E0C4; 
+  border-radius: 10px;
 }
 
 a {

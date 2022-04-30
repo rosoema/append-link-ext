@@ -6,15 +6,24 @@ export default function Bases() {
 
     const items = JSON.parse(localStorage.getItem("items"))
 
-    const show = useState(false);
+    const [show, setShow] = useState({
+        active: false,
+        title: ""
+    });
 
     return (
         <WrapButton>
             {
                 items.map( item => {
                     return (
-                        <Button key={item.title}>
+                        <Button key={item.title} onClick={() => setShow({active: !show.active, title: item.title})}>
                             {item.title}
+
+                            {
+                                show.active && item.title === show.title ?
+                                <p>Boo!</p>
+                                : null
+                            }
                         </Button>
                     )
                 })

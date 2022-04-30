@@ -1,4 +1,3 @@
-import './App.css';
 import Header from "./components/Header";
 import "./media/icon.svg";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

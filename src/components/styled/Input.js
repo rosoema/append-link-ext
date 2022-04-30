@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export default styled.input`
-    margin-bottom: 15px;
+    margin-top: 15px;
     height: 30px;
-    width: 100%;
+    width: 92%;
     background: transparent;
     border: #32E0C4 solid;
     border-width: 0 0 1px 0;

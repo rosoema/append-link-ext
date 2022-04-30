@@ -5,6 +5,6 @@ export default styled.div`
     flex-direction: ${prop => prop.newBase ? "column" : "null"};
     justify-content: ${prop => prop.notmain ? "right" : "null"};
     align-items: ${prop => prop.newBase ? "end" : "center"};
-    margin: 0;
+    margin: ${prop => prop.newBaseButtons ? "15px 0 0 0" : "0"};
     padding: ${prop => prop.newBaseButtons ? "null" : "10px"};
 `

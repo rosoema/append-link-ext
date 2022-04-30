@@ -10,6 +10,10 @@ export default styled.div`
     border-radius: 5px;
     box-shadow: 0 0 5px #32E0C460;
     transition: .3s;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
 
     &:hover {
         background-color: #32E0C440;
