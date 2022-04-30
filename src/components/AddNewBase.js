@@ -6,6 +6,7 @@ import Cancel from "../media/cancel-button.svg";
 import Okay from "../media/okay-button.svg";
 import Input from "./styled/Input";
 import addData from "./AddData";
+import Delete from "./Delete";
 
 const getInputValue = (event) => {
     let userValue = event.target.value;
@@ -23,7 +24,7 @@ export default function AddNewBase() {
             <Input type="text" placeholder="Enter title" className="input-title" onChange={getInputValue} required/>
             <Input type="text" placeholder="Enter base link" className="input-base-link" onChange={getInputValue} required/>
             <Wrap newBaseButtons>
-                <Link to="/" style={{margin: "0 5px 0 0"}}><Image src={Cancel} alt="cancel-button"></Image></Link>
+                <Link to="/" style={{margin: "0 5px 0 0"}} onClick={Delete}><Image src={Cancel} alt="cancel-button" ></Image></Link>
                 <Link to="/" onClick={addData}><Image src={Okay} alt="okay-button"/></Link>
             </Wrap>
         </Wrap>
