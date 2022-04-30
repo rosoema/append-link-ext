@@ -7,11 +7,12 @@ export default styled.div`
 
     p {
         margin: 0;
+        cursor: pointer;
     }
 
     .edit-remove {
         position: relative;
-        margin-left: 150px;
+        margin-left: 155px;
         margin-top: -18px;
 
         img {

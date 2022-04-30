@@ -13,7 +13,6 @@ export default styled.div`
     font-size: 15px;
     font-weight: 600;
     text-transform: capitalize;
-    cursor: pointer;
     background: #ffffff15;
 
     &:hover {

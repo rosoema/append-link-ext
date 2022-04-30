@@ -24,6 +24,8 @@ export default function addData() {
         localStorage.setItem("items", JSON.stringify(arr));
         localStorage.removeItem("title");
         localStorage.removeItem("base");
+        window.location.reload();
+        
     } else {
         alert("Both fields need to be filled out.");
         localStorage.removeItem("title");
