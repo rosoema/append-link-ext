@@ -20,7 +20,7 @@ const getInputValue = (event) => {
 
 export default function AddNewBase() {
 
-    window.addEventListener("keypress", (event) => {
+    document.addEventListener("keypress", (event) => {
         if(event.key === "Enter"){
             document.getElementById("add-data-btn").click();
             document.location.href = "/";

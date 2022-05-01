@@ -32,3 +32,9 @@ a {
   width: 27px;
   height: 27px;
 }
+
+#edit-title {
+  margin: 15px 0 -15px 22px;
+  text-transform: capitalize;
+  font-weight: 600;
+}

@@ -28,7 +28,6 @@ export default function addData() {
         localStorage.removeItem("base");
         
     } else {
-        alert("Both fields need to be filled out.");
         localStorage.removeItem("title");
         localStorage.removeItem("base");
     }

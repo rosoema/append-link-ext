@@ -15,6 +15,10 @@ export default styled.div`
         margin-left: 155px;
         margin-top: -18px;
 
+        a{
+            height: 16px;
+        }
+
         img {
             width: 16px;
             margin-left: 5px;

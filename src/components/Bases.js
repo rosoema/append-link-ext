@@ -7,6 +7,7 @@ import okay from "../media/okay-filled.svg";
 import cancel from "../media/cancel-filled.svg";
 import Input from "./styled/Input";
 import Image from "./styled/Image";
+import { Link } from "react-router-dom";
 
 
 export default function Bases() {
@@ -49,18 +50,16 @@ export default function Bases() {
         }
     }
 
-    const changeTab = (event) => {
-
-    }
-
     const items = JSON.parse(localStorage.getItem("items"));
 
     const [show, setShow] = useState({
         active: false,
-        title: ""
+        title: "",
+        suffix: false,
+        edit: false
     });
 
-    window.addEventListener("keypress", (event) => {
+    document.addEventListener("keypress", (event) => {
         if(event.key === "Enter" && show.active){
             document.getElementById("open-btn").click();
         }
@@ -72,17 +71,22 @@ export default function Bases() {
                 items.map( item => {
                     return (
                         <Button key={item.id}>
-                            <p onClick={() => setShow({active: !show.active, title: item.title})}>
+                            <p onClick={() => setShow({active: !show.active, title: item.title, suffix: !show.suffix})}>
                                 {item.title}
                             </p>
 
                             <div className="edit-remove" style={{display: show.active && item.title === show.title ? "flex" : "none"}}>
                                 <Image src={trash} alt="remove" onClick={removeTab} data-id={item.id} />
-                                <Image src={edit} alt="edit" onClick={changeTab} data-id={item.id}/>
+                                <Link to="/edit-base" onClick={() => {
+                                    localStorage.setItem("newtitle", item.title);
+                                    localStorage.setItem("newbase", item.base);
+                                    localStorage.setItem("id", item.id
+                                    );
+                                }}><Image src={edit} alt="edit" /></Link>
                             </div>
 
                             {
-                                show.active && item.title === show.title ?
+                                show.active && show.suffix && item.title === show.title ?
                                 <div className="input-field">
                                     <Input type="text" placeholder="Enter link suffix" onChange={getSuffix}  required id="suffix-field"/>
                                     <div className="buttons-field">
