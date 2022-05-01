@@ -2,7 +2,8 @@
   "short_name": "Link Appender",
   "name": "Link Appender React App",
   "permissions": [
-    "storage"
+    "storage",
+    "tabs"
   ],
   "icons": [
     {

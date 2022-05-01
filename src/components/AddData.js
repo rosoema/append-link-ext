@@ -6,25 +6,26 @@ export default function addData() {
     if(title && base){
         let arr = [];
 
-        if(stored && stored !== []){
+        if(stored && stored !== "[]"){
             arr.push(
                 ...stored, 
                 {
                 title: title,
-                base: base
+                base: base,
+                id: stored[stored.length - 1].id + 1
             });
         } else {
             arr.push(
                 {
                 title: title,
-                base: base
+                base: base,
+                id: 0
             });
         }   
 
         localStorage.setItem("items", JSON.stringify(arr));
         localStorage.removeItem("title");
         localStorage.removeItem("base");
-        window.location.reload();
         
     } else {
         alert("Both fields need to be filled out.");
