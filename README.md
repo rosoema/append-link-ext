@@ -6,9 +6,9 @@ A simple and easy to use Link Appender extension.
 ### Steps to set up the extension in your browser: 
 
 Download ZIP, fork or clone the repo. Call `npm install` to download dependencies and `npm run build` to create a build directory. 
-Go to [chrome://extensions](chrome://extensions) and turn on developer mode. 
+Go to [chrome://extensions/](chrome://extensions/) and turn on 'Developer mode'. To upload the extension, go to 'Load unpacked' and select the build folder.  
 
-### Steps after download:
+### Steps after setup:
 
 1. Click on 'Add new base link'
 
