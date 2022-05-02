@@ -47,7 +47,6 @@ export default function EditBase(){
     document.addEventListener("keypress", (event) => {
         if(event.key === "Enter"){
             document.getElementById("edit-data").click();
-            document.location.href = "/";
         }
     })
 

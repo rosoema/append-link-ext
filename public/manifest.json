@@ -1,6 +1,7 @@
 {
   "short_name": "Link Appender",
   "name": "Link Appender",
+  "description": "Easily append your links. Create a base link, input the title and your base URL. Next step: Append your links!",
   "version": "1.0.0",
   "manifest_version": 2,
   "permissions": [
