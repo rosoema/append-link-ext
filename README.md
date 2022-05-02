@@ -19,6 +19,7 @@ Photos of the project are below.
 - [x] React (react-router-dom)
 - [x] styled-components, CSS (minimal)
 
+## Project images 
 
 ![image1](./src/media/project-images/Untitled1.png)
 ![image2](./src/media/project-images/Untitled2.png)
