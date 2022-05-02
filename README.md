@@ -2,6 +2,7 @@
 
 A simple and easy to use Link Appender extension. 
 
+
 ### Steps:
 
 1. Click on 'Add new base link'
@@ -15,10 +16,12 @@ A simple and easy to use Link Appender extension.
     - To edit, click on your base tab and press the pen icon.
         - Input new title/URL base. Save. 
 
+
 ### Tech used: 
 
 - [x] React (react-router-dom)
-- [x] styled-components, CSS (minimal)
+- [x] styled-components, CSS
+
 
 ## Project images 
 
