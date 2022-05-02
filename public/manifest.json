@@ -1,29 +1,24 @@
 {
   "short_name": "Link Appender",
-  "name": "Link Appender React App",
+  "name": "Link Appender",
+  "version": "1.0.0",
+  "manifest_version": 2,
   "permissions": [
     "storage",
-    "tabs"
+    "tabs",
+    "activeTab",
+    "http://*/*", 
+    "https://*/*"
   ],
-  "icons": [
-    {
-      "src": "icon.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "icon.svg",
-      "type": "image/svg",
-      "sizes": "192x192"
-    },
-    {
-      "src": "icon.svg",
-      "type": "image/svg",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.svg",
+    "default_title": "Link Appender"
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
 }

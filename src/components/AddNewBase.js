@@ -23,7 +23,6 @@ export default function AddNewBase() {
     document.addEventListener("keypress", (event) => {
         if(event.key === "Enter"){
             document.getElementById("add-data-btn").click();
-            document.location.href = "/";
         }
     });
 
