@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Cancel from "../media/cancel-button.svg";
 import Okay from "../media/okay-button.svg";
 import { Fragment } from "react";
+let valid = require("valid-url");
 
 const getInputValue = (event) => {
     let userValue = event.target.value;
@@ -26,20 +27,26 @@ const newValues = () => {
     let items = JSON.parse(localStorage.getItem("items"));
     let newArr = [];
 
-    for(let i = 0; i < items.length; i++){
-        if(items[i].id != localStorage.getItem("id")){
-            newArr.push(items[i]);
-        } else {
-            newArr.push({
-                title: localStorage.getItem("newtitle"),
-                base: localStorage.getItem("newbase"),
-                id: items[i].id
-            });
+    if(localStorage.getItem("newtitle") !== "" && localStorage.getItem("newtitle") !== " " && valid.isWebUri(localStorage.getItem("newbase"))){
+        for(let i = 0; i < items.length; i++){
+            if(items[i].id != localStorage.getItem("id")){
+                newArr.push(items[i]);
+            } else {
+                newArr.push({
+                    title: localStorage.getItem("newtitle"),
+                    base: localStorage.getItem("newbase"),
+                    id: items[i].id
+                });
+            }
         }
+
+        localStorage.setItem("items", JSON.stringify(newArr));
+        Delete();
+    } else {
+        alert("Inputs invalid.\n\nExample title: New Title \nExample base: http://example.com OR https://example.com");
+        Delete();
     }
 
-    localStorage.setItem("items", JSON.stringify(newArr));
-    Delete();
 }
 
 export default function EditBase(){

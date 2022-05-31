@@ -29,7 +29,7 @@ export default function AddNewBase() {
     return (
         <Wrap newBase>
             <Input type="text" placeholder="Enter title" className="input-title" onChange={getInputValue} required/>
-            <Input type="text" placeholder="Enter base link" className="input-base-link" onChange={getInputValue} required/>
+            <Input type="text" placeholder="Enter Http or Https URI" className="input-base-link" onChange={getInputValue} required/>
             <Wrap newBaseButtons>
                 <Link to="/" style={{margin: "0 5px 0 0"}} onClick={Delete}><Image src={Cancel} alt="cancel-button" ></Image></Link>
                 <Link to="/" onClick={addData} id="add-data-btn"><Image src={Okay} alt="okay-button"/></Link>
