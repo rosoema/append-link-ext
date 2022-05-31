@@ -5,7 +5,7 @@ export default styled.input`
     height: 30px;
     width: 94%;
     background: transparent;
-    border: ${prop => prop.editBase ? "#F2FA5A solid" : "#32E0C4 solid"};
+    border: ${prop => prop.editBase ? "#DFFCB5 solid" : "#32E0C4 solid"};
     border-width: 0 0 1px 0;
     &:focus {
         outline: none;
