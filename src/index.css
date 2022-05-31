@@ -34,8 +34,9 @@ a {
 }
 
 #edit-title {
-  margin: 15px 0 -15px 22px;
+  margin: 15px 0 -15px 5px;
   text-transform: capitalize;
   font-weight: 600;
   font-size: 16px;
+  color: #F2FA5A;
 }
