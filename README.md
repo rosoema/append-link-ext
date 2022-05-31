@@ -22,6 +22,8 @@ Go to [chrome://extensions/](chrome://extensions/) and turn on 'Developer mode'.
     - To edit, click on your base tab and press the pen icon.
         - Input new title/URL base. Save. 
 
+__NOTE:__ All link bases are validated. Make sure your link base is correct (http:// ... OR https:// ...).
+
 
 ### Tech used: 
 
